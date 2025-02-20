@@ -24,6 +24,14 @@ namespace Topic_5_assignment_part_one
             Console.WriteLine("Please enter the name of the planet you are visiting");
             visitingPlanet = Console.ReadLine();
 
+            //ask about invalid input
+            while (visitingPlanet != null)
+            {
+                Console.WriteLine("That is invalid input. Please try again");
+                Console.WriteLine("Enter the name of the planet you are visiting");
+                visitingPlanet = Console.ReadLine();
+            }
+
             if (visitingPlanet.ToLower() == "venus")
             {
                 Console.WriteLine("Your weight would be " + (earthWeight * 0.78) + " pounds on Venus");
@@ -48,7 +56,7 @@ namespace Topic_5_assignment_part_one
             {
                 Console.WriteLine("Your weight would be " + (earthWeight * 1.23) + " pounds on Neptune");
             }
-            else { Console.WriteLine("That is not valid input"); }
+            //else { Console.WriteLine("That is not valid input"); }
         }
     }
 }
