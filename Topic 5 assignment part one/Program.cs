@@ -7,8 +7,9 @@ namespace Topic_5_assignment_part_one
         static void Main(string[] args)
         {
             //Variables
-            double earthWeight, planetWeight;
+            double earthWeight;
             string visitingPlanet;
+            bool done = false;
 
             Console.WriteLine("Please enter your current earth weight in pounds: ");
             double.TryParse(Console.ReadLine(), out earthWeight);
@@ -21,42 +22,45 @@ namespace Topic_5_assignment_part_one
             Console.WriteLine("5. Uranus");
             Console.WriteLine("6. Neptune");
             Console.WriteLine(" ");
-            Console.WriteLine("Please enter the name of the planet you are visiting");
-            visitingPlanet = Console.ReadLine();
+            
 
             //ask about invalid input
-            while (visitingPlanet != null)
+            while (!done)
             {
-                Console.WriteLine("That is invalid input. Please try again");
-                Console.WriteLine("Enter the name of the planet you are visiting");
+                done = true;
+                Console.WriteLine("Please enter the name of the planet you are visiting: ");
                 visitingPlanet = Console.ReadLine();
-            }
 
-            if (visitingPlanet.ToLower() == "venus")
-            {
-                Console.WriteLine("Your weight would be " + (earthWeight * 0.78) + " pounds on Venus");
+                if (visitingPlanet.ToLower() == "venus")
+                {
+                    Console.WriteLine("Your weight would be " + (earthWeight * 0.78) + " pounds on Venus");
+                }
+                else if (visitingPlanet.ToLower() == "mars")
+                {
+                    Console.WriteLine("Your weight would be " + (earthWeight * 0.39) + " pounds on Mars");
+                }
+                else if (visitingPlanet.ToLower() == "jupiter")
+                {
+                    Console.WriteLine("Your weight would be " + (earthWeight * 2.65) + " pounds on Jupiter");
+                }
+                else if (visitingPlanet.ToLower() == "saturn")
+                {
+                    Console.WriteLine("Your weight would be " + (earthWeight * 1.17) + " pounds on Saturn");
+                }
+                else if (visitingPlanet.ToLower() == "uranus")
+                {
+                    Console.WriteLine("Your weight would be " + (earthWeight * 1.05) + " pounds on Uranus");
+                }
+                else if (visitingPlanet.ToLower() == "neptune")
+                {
+                    Console.WriteLine("Your weight would be " + (earthWeight * 1.23) + " pounds on Neptune");
+                }
+                else
+                {
+                    Console.WriteLine("Not a planet");
+                    done = false;
+                }
             }
-            else if (visitingPlanet.ToLower() == "mars")
-            {
-                Console.WriteLine("Your weight would be " + (earthWeight * 0.39) + " pounds on Mars");
-            }
-            else if (visitingPlanet.ToLower() == "jupiter")
-            {
-                Console.WriteLine("Your weight would be " + (earthWeight * 2.65) + " pounds on Jupiter");
-            }
-            else if (visitingPlanet.ToLower() == "saturn")
-            {
-                Console.WriteLine("Your weight would be " + (earthWeight * 1.17) + " pounds on Saturn");
-            }
-            else if (visitingPlanet.ToLower() == "uranus")
-            {
-                Console.WriteLine("Your weight would be " + (earthWeight * 1.05) + " pounds on Uranus");
-            }
-            else if (visitingPlanet.ToLower() == "neptune")
-            {
-                Console.WriteLine("Your weight would be " + (earthWeight * 1.23) + " pounds on Neptune");
-            }
-            //else { Console.WriteLine("That is not valid input"); }
         }
     }
 }
