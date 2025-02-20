@@ -22,9 +22,7 @@ namespace Topic_5_assignment_part_one
             Console.WriteLine("5. Uranus");
             Console.WriteLine("6. Neptune");
             Console.WriteLine(" ");
-            
 
-            //ask about invalid input
             while (!done)
             {
                 done = true;
@@ -57,7 +55,8 @@ namespace Topic_5_assignment_part_one
                 }
                 else
                 {
-                    Console.WriteLine("Not a planet");
+                    Console.WriteLine("Invalid input");
+                    Console.WriteLine(" ");
                     done = false;
                 }
             }
