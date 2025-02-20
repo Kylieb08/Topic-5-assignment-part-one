@@ -11,6 +11,7 @@ namespace Topic_5_assignment_part_one
             string visitingPlanet;
             bool done = false;
 
+            //add while loop to check for valid input
             Console.WriteLine("Please enter your current earth weight in pounds: ");
             double.TryParse(Console.ReadLine(), out earthWeight);
             Console.WriteLine(" ");
