@@ -10,20 +10,12 @@ namespace Topic_5_assignment_part_one
             double earthWeight;
             string visitingPlanet;
             bool done = false;
+            Console.WriteLine("Please enter your current earth weight in pounds: ");
 
-            while (!done)
+            while (!double.TryParse(Console.ReadLine(), out earthWeight) || earthWeight <= 0)
             {
-                done = true;
-                Console.WriteLine("Please enter your current earth weight in pounds: ");
-                double.TryParse(Console.ReadLine(), out earthWeight);
-
-                if (earthWeight <= 0)
-                {
-                    Console.WriteLine("That is invalid input");
-                    Console.WriteLine("Please try again");
-                    Console.WriteLine(" ");
-                    done = false;
-                }
+                Console.WriteLine("That is invalid input");
+                Console.WriteLine("Please try again");
             }
 
             Console.WriteLine(" ");
