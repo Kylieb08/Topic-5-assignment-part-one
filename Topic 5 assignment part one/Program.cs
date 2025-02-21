@@ -11,9 +11,21 @@ namespace Topic_5_assignment_part_one
             string visitingPlanet;
             bool done = false;
 
-            //add while loop to check for valid input
-            Console.WriteLine("Please enter your current earth weight in pounds: ");
-            double.TryParse(Console.ReadLine(), out earthWeight);
+            while (!done)
+            {
+                done = true;
+                Console.WriteLine("Please enter your current earth weight in pounds: ");
+                double.TryParse(Console.ReadLine(), out earthWeight);
+
+                if (earthWeight <= 0)
+                {
+                    Console.WriteLine("That is invalid input");
+                    Console.WriteLine("Please try again");
+                    Console.WriteLine(" ");
+                    done = false;
+                }
+            }
+
             Console.WriteLine(" ");
             Console.WriteLine("I have information for the following planets:");
             Console.WriteLine("1. Venus");
