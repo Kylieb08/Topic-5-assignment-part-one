@@ -6,6 +6,8 @@ namespace Topic_5_assignment_part_one
     {
         static void Main(string[] args)
         {
+            //Topic five assignment part one
+
             //Variables
             double earthWeight;
             string visitingPlanet;
